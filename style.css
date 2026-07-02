@@ -25,7 +25,7 @@ body {
 
 .color-stripe {
   display: flex;
-  height: 6px;
+  height: 18px;
 }
 
 .color-stripe span {
