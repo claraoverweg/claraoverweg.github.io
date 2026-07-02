@@ -205,7 +205,9 @@ section p {
 }
 
 .entry-title {
+  display: block;
   font-weight: 600;
+  color: var(--muted);
   margin: 0 0 0.2rem;
 }
 
@@ -218,12 +220,18 @@ section p {
 .entry-authors {
   display: block;
   color: var(--muted);
+  font-weight: normal;
+  font-style: normal;
   font-size: 0.9rem;
   margin: 0 0 0.2rem;
 }
 
 .entry-authors a {
   text-decoration: underline;
+}
+
+.entry-abstract {
+  font-style: italic;
 }
 
 .placeholder {
