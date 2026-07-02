@@ -5,12 +5,14 @@
   --accent: #3a5a52;
   --border: #e6e2dc;
   --max-width: 760px;
-  --palette-1: #f27291;
-  --palette-2: #82241f;
-  --palette-3: #b5decc;
-  --preview-1: #f27291;
-  --preview-2: #82241f;
-  --preview-3: #b5decc;
+  --palette-1: #bb7125;
+  --palette-2: #ebd3a2;
+  --palette-3: #6b7140;
+  --palette-4: #34454c;
+  --preview-1: #bb7125;
+  --preview-2: #ebd3a2;
+  --preview-3: #6b7140;
+  --preview-4: #34454c;
 }
 
 * {
@@ -38,6 +40,7 @@ body {
 .color-stripe span:nth-child(1) { background: var(--palette-1); }
 .color-stripe span:nth-child(2) { background: var(--palette-2); }
 .color-stripe span:nth-child(3) { background: var(--palette-3); }
+.color-stripe span:nth-child(4) { background: var(--palette-4); }
 
 .page {
   max-width: var(--max-width);
@@ -83,6 +86,7 @@ nav a::before {
 nav a:nth-child(1)::before { background: var(--palette-1); }
 nav a:nth-child(2)::before { background: var(--palette-2); }
 nav a:nth-child(3)::before { background: var(--palette-3); }
+nav a:nth-child(4)::before { background: var(--palette-4); }
 
 nav a:hover::before {
   animation: nav-bounce 0.6s cubic-bezier(0.28, 0.84, 0.42, 1) forwards;
@@ -267,6 +271,7 @@ footer {
 .palette-credit .swatch:nth-child(1) { background: var(--palette-1); }
 .palette-credit .swatch:nth-child(2) { background: var(--palette-2); }
 .palette-credit .swatch:nth-child(3) { background: var(--palette-3); }
+.palette-credit .swatch:nth-child(4) { background: var(--palette-4); }
 
 .color-switch-btn {
   display: inline-flex;
@@ -303,6 +308,7 @@ footer {
 .btn-preview-dot:nth-child(1) { background: var(--preview-1); }
 .btn-preview-dot:nth-child(2) { background: var(--preview-2); }
 .btn-preview-dot:nth-child(3) { background: var(--preview-3); }
+.btn-preview-dot:nth-child(4) { background: var(--preview-4); }
 
 .paper-link {
   display: inline-block;
@@ -353,6 +359,33 @@ footer {
 
 .pub-entry .entry-abstract {
   margin: 0.75rem 0 0 1.15rem;
+}
+
+.music-entry .entry-arrow {
+  border-left-color: var(--palette-4);
+}
+
+.music-entry .entry-title {
+  flex: 1;
+}
+
+.speaker-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: auto;
+  color: var(--palette-4);
+}
+
+.speaker-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.speaker-btn:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 560px) {
