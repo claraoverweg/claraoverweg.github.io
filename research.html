@@ -30,10 +30,17 @@
 
     <section>
       <h2>Publications</h2>
-      <div class="entry">
-        <p class="entry-title placeholder">[Paper title]</p>
-        <p class="entry-meta placeholder">[Journal name, year]</p>
-      </div>
+      <details class="entry pub-entry">
+        <summary>
+          <span class="entry-arrow" aria-hidden="true"></span>
+          <span class="entry-heading">
+            <span class="entry-title placeholder">[Paper title]</span>
+            <span class="entry-meta placeholder">[Journal name, year]</span>
+          </span>
+        </summary>
+        <p class="entry-abstract placeholder">[One or two sentence abstract or summary.]</p>
+        <a href="#" class="paper-link placeholder">[Link to published paper]</a>
+      </details>
     </section>
 
     <section>
@@ -46,7 +53,15 @@
         <span class="swatch"></span>
         <span class="swatch"></span>
         <span class="swatch"></span>
-        <span id="palette-caption">Colors taken from Sanzo Wada's <em>Dictionary of Color Combinations</em>, combination 147. Refresh to see some different combinations!</span>
+        <span id="palette-caption">Colors taken from Sanzo Wada's <em>Dictionary of Color Combinations</em>, combination 147.</span>
+        <button type="button" id="switch-color-btn" class="color-switch-btn">
+          Switch colors
+          <span class="btn-preview">
+            <span class="btn-preview-dot"></span>
+            <span class="btn-preview-dot"></span>
+            <span class="btn-preview-dot"></span>
+          </span>
+        </button>
       </div>
       &copy; 2026 Clara Overweg
     </footer>

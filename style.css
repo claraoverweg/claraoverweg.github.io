@@ -8,6 +8,9 @@
   --palette-1: #f27291;
   --palette-2: #82241f;
   --palette-3: #b5decc;
+  --preview-1: #f27291;
+  --preview-2: #82241f;
+  --preview-3: #b5decc;
 }
 
 * {
@@ -227,8 +230,10 @@ footer {
 
 .palette-credit {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.4rem;
+  row-gap: 0.4rem;
   margin-bottom: 0.6rem;
 }
 
@@ -242,6 +247,93 @@ footer {
 .palette-credit .swatch:nth-child(1) { background: var(--palette-1); }
 .palette-credit .swatch:nth-child(2) { background: var(--palette-2); }
 .palette-credit .swatch:nth-child(3) { background: var(--palette-3); }
+
+.color-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: 0.3rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.78rem;
+  font-family: inherit;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.color-switch-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-preview {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.btn-preview-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.btn-preview-dot:nth-child(1) { background: var(--preview-1); }
+.btn-preview-dot:nth-child(2) { background: var(--preview-2); }
+.btn-preview-dot:nth-child(3) { background: var(--preview-3); }
+
+.paper-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.paper-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.pub-entry summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.pub-entry summary::-webkit-details-marker {
+  display: none;
+}
+
+.pub-entry .entry-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-entry .entry-arrow {
+  margin-top: 0.4rem;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid var(--palette-2);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.pub-entry[open] .entry-arrow {
+  transform: rotate(90deg);
+}
+
+.pub-entry .entry-abstract {
+  margin: 0.75rem 0 0 1.15rem;
+}
 
 @media (max-width: 560px) {
   .profile {
