@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://claraoverweg.github.io/sitemap.xml
